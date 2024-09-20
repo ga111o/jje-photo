@@ -25,6 +25,7 @@ body {
   height: 522px;
   object-fit: cover;
   border-radius: 5px;
+  transform: scaleX(-1);
 }
 
 button {
