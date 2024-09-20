@@ -1,0 +1,52 @@
+body {
+  background-color: rgb(230, 230, 230);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.main {
+  background-color: white;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  transition: height 0.3s ease;
+  overflow: hidden;
+}
+
+.video {
+  width: 406px;
+  height: 522px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+button {
+  margin-top: 30px;
+  background-color: rgb(170, 190, 250);
+  color: rgba(47, 49, 78, 0.921);
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  padding: 15px 23px;
+  box-shadow: 0 2px 5px rgb(107, 117, 152);
+  transition: 0.3s;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.capture-button:hover {
+  box-shadow: 0 3px 10px rgb(142, 154, 196);
+  transition: 0.3s;
+  border-radius: 3px;
+}
+
+img {
+  margin: 15px 2px 0 2px;
+}
