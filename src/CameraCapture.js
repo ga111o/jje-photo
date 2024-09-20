@@ -41,17 +41,20 @@ const CameraCapture = () => {
     const cropX = (videoWidth - cropWidth) / 2;
     const cropY = (videoHeight - cropHeight) / 2;
 
+    context.save();
+    context.scale(-1, 1);
     context.drawImage(
       video,
       cropX,
       cropY,
       cropWidth,
       cropHeight,
-      0,
+      -cropWidth,
       0,
       cropWidth,
       cropHeight
     );
+    context.restore();
 
     const photoData = canvas.toDataURL("image/png");
     setPhotos((prevPhotos) => [...prevPhotos, photoData]);
