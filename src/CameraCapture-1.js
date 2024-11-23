@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import "./CameraCapture.css";
-import front_img from "./public/front_img2.png";
+import front_img from "./public/front_img.png";
 
 const CameraCapture = () => {
   const videoRef = useRef(null);
@@ -12,7 +12,7 @@ const CameraCapture = () => {
 
   const startCamera = () => {
     navigator.mediaDevices
-      .getUserMedia({ video: { width: 360, height: 700 } })
+      .getUserMedia({ video: true })
       .then((stream) => {
         videoRef.current.srcObject = stream;
         videoRef.current.play();
@@ -25,8 +25,8 @@ const CameraCapture = () => {
     const canvas = canvasRef.current;
     const context = canvas.getContext("2d");
 
-    canvas.width = 400;
-    canvas.height = 700;
+    canvas.width = 406;
+    canvas.height = 552;
 
     context.fillStyle = "white";
     context.fillRect(0, 0, canvas.width, canvas.height);
@@ -35,8 +35,8 @@ const CameraCapture = () => {
     const videoWidth = video.videoWidth;
     const videoHeight = video.videoHeight;
 
-    const cropWidth = 400;
-    const cropHeight = 700;
+    const cropWidth = 406;
+    const cropHeight = 552;
 
     const cropX = (videoWidth - cropWidth) / 2;
     const cropY = (videoHeight - cropHeight) / 2;
@@ -88,10 +88,10 @@ const CameraCapture = () => {
     combinedCanvas.height = 1920;
 
     const positions = [
-      { x: 105, y: 335 },
-      { x: 105, y: 1050 },
-      { x: 515, y: 335 },
-      { x: 515, y: 1050 },
+      { x: 110, y: 461 },
+      { x: 110, y: 1000 },
+      { x: 558, y: 530 },
+      { x: 558, y: 1089 },
     ];
 
     const overlayImage = new Image();
@@ -104,8 +104,8 @@ const CameraCapture = () => {
         img.onload = () => {
           const { x, y } = positions[index];
 
-          const cutWidth = 450;
-          const cutHeight = 700;
+          const cutWidth = 406;
+          const cutHeight = 552;
           const cutX = (img.width - cutWidth) / 2;
           const cutY = (img.height - cutHeight) / 2;
 

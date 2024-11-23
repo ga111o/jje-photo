@@ -21,8 +21,8 @@ body {
 }
 
 .video {
-  width: 406px;
-  height: 522px;
+  width: 380px;
+  height: 700px;
   object-fit: cover;
   border-radius: 5px;
   transform: scaleX(-1);
